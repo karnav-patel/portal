@@ -14,9 +14,6 @@ ul {
 li {
   float: left;
 }
-div {
-  float: left;
-}
 
 li a {
   display: block;
@@ -33,34 +30,63 @@ img {
   border-radius: 8px;
 }
 </style>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
 </head>
 <body>
-
 <ul>
   <li><a class="active" href="./">Home</a></li>
   <li><a href="schedule.html">Schedule</a></li>
   <li><a href="contact.html">Contact</a></li>
   <li><a href="about.html">About</a></li>
 </ul>
-<h2>Contact Me</h2> 
-<form
-  action="https://formspree.io/FORM_ID"
-  method="POST"
->
-  <label>
-    Your Name:
-    <input type="text" name="name">
-  </label>
-  <label>
-    Your Email:
-    <input type="email" name="_replyto">
-  </label>
-  <label>
-    Message:
-    <textarea name="message"></textarea>
-  </label>
-  <input type="submit" value="Send">
-</form>
+<h2>Contact Form</h2> 
+<div class="container">
+  <form action="https://formspree.io/patelkarnav2209@gmail.com" method="POST">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
 
+    <label for="email">Email</label>
+    <input type="text" id="email" name="_replyto" placeholder="Your email..">
+
+
+    <label for="message">Subject</label>
+    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
 </body>
 </html>
